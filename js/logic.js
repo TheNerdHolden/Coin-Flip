@@ -20,7 +20,7 @@ let;
 // which are updated each time the function below is run, and which
 // are reset to zero whenever the browser tab is reloaded
 
-function someSmartName(param) {
+function runGame(param) {
 // creates a function called someSmartName that takes a single parameter: param
   
   let someVariable = param;

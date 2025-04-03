@@ -13,49 +13,49 @@
 // Each line of code below is explained by the comment underneath it,
 // comments which may seem opaque at first but do contain keywords you can search up
 
-let;
-let;
-let;
+let numWon;
+let numLoss;
+let numGames;
 // declares three global variables, set when the page is loaded,
 // which are updated each time the function below is run, and which
 // are reset to zero whenever the browser tab is reloaded
 
-function runGame(param) {
+function runGame(x) {
 // creates a function called someSmartName that takes a single parameter: param
   
-  let someVariable = param;
+  let pick = x;
   // creates the variable used to store the player's chosen coin face
   // variable is set to the value of param, the parameter of the function
   // the value of param derives from the value of the argument when the function is called
   // the function is called in the html, in an onclick attribute, and param is declared there
   // clicking the heads button sets param to 'heads', while the tails button sets it to 'tails'
   
-  let;
+  let randNum = Math.ceil(Math.random() * 2);
   // creates a variable to hold a random integer, either 1 or 2
 
-  let;
-  // creates a variable to store the player's choice
+  let choice;
+  // creates a variable to store the computer's choice
 
   // conditional statement 
-  if (something == 1) {       // if the random number equals 1
-    'do stuff here';          // call the result 'tails'
+  if (randNum == 1) {       // if the random number equals 1
+    choice = 'tails';          // call the result 'tails'
   } else {                    // otherwise
-    'do other stuff';         // call the result 'heads'
+    choice = 'heads';         // call the result 'heads'
   };                          
 
-  let;
+  let status;
   // creates a variable to determine the game result
 
   // conditional statement 
-  if (this === that) {    // if values of the coin flip and player choice match,
-    'do stuff here';      // call the result a win
-    'do more stuff';      // and increment global wins counter
+  if (pick === choice) {    // if values of the coin flip and player choice match,
+    status = "win";      // call the result a win
+    numWon++;      // and increment global wins counter
   } else {                // otherwise
-    'do another stuff';   // call it a loss
-    'and do more'         // and increment global loss counter
+    status = "lose";   // call it a loss
+    numLoss++;         // and increment global loss counter
   };                      
 
-  'total of games played'++;
+  numGames++;
   // increments the global variable declared outside this function
 
   let lorem = document.getElementById('ipsum');

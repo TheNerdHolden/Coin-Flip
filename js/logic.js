@@ -13,9 +13,9 @@
 // Each line of code below is explained by the comment underneath it,
 // comments which may seem opaque at first but do contain keywords you can search up
 
-let numWon;
-let numLoss;
-let numGames;
+let numWon = 0;
+let numLoss = 0;
+let numGames = 0;
 // declares three global variables, set when the page is loaded,
 // which are updated each time the function below is run, and which
 // are reset to zero whenever the browser tab is reloaded
@@ -58,25 +58,50 @@ function runGame(x) {
   numGames++;
   // increments the global variable declared outside this function
 
-  let lorem = document.getElementById('ipsum');
+  let prediction = document.getElementById('prediction');
   // create a variable and set it to the element to hold the predicted choice 
-  lorem.innerText = choiceName; 
+  prediction.innerText = pick; 
   // output 'heads' or 'tails'
 
   // follow that same pattern for each of the following pairs:
   
   // store an element to output the result of the flip 
+  let flip = document.getElementById('flip')
   // output flip results
+  flip.innerText = choice;
 
   // store an element to output the result of the toss
+  let result = document.getElementById('result');
   // output 'win' or 'loss'
+  result.innerText = status;
 
   // store an element to output the number of games played
+  let count = document.getElementById('count');
   // output # of games played (incremented when the function runs)
+  count.innerText = numGames;
 
   // store an element to output the number of games won
+  let wins = document.getElementById('wins');
   // output # of games played (incremented when the function runs)
+  wins.innerText = numWon;
 
   // store an element to output the number of games lost
+  let losses = document.getElementById('losses');
   // output # of games played (incremented when the function runs)
+  losses.innerText = numLoss;
+}
+
+function resetScore() {
+  numWon = 0;
+  numLoss = 0;
+  numGames = 0;
+
+  let count = document.getElementById('count');
+  count.innerText = numGames;
+
+  let wins = document.getElementById('wins');
+  wins.innerText = numWon;
+
+  let losses = document.getElementById('losses');
+  losses.innerText = numLoss;
 }
